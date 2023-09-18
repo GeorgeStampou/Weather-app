@@ -31,7 +31,7 @@ function onClick(event){
                     containerError.classList.add("show-up");
                 }else{
                     console.log(data);
-                    weatherimg.src = data.current.condition.icon;
+                    weatherimg.src = `http:${data.current.condition.icon}`;
                     weatherimg.alt = data.current.condition.text;
                     tempC.innerHTML = `${Math.round(data.current.temp_c)}°C`;
                     description.innerHTML = data.current.condition.text; 
