@@ -36,7 +36,7 @@ To use the Weather App, follow these steps:
 
 2. Enter the location for which you want to check the weather in the input field.
 
-3. Click the "Search" button or press Enter after entering the location.
+3. Click the search button (magnifier icon) or press Enter after entering the location.
 
 4. The app will retrieve and display the current weather information for the specified location.
 
