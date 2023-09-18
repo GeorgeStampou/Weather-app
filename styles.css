@@ -4,9 +4,7 @@
     border: 0;
     font-size: 100%;
     list-style: none;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
-    
-    
+    font-family: Verdana, Geneva, Tahoma, sans-serif;    
 }
 
 body{
@@ -39,15 +37,12 @@ main{
     .container{
         width: 50%;
     }
-    
 }
 
 .shadow{
     border: 1px solid rgba(255,255,255, 0.18);
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
-
-
 
 .container-info{
     display: none;
@@ -57,7 +52,6 @@ main{
     display: flex;
     flex-direction: column;
     text-align: center;
-    
 }
 
 .hum-wind{
@@ -97,20 +91,14 @@ h2{
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    
 }
-
 
 input{
     border: 1px solid black;
     border-radius: 10px;
-    padding-left: 3%;    
-}
-
-
-input{
+    padding-left: 3%;
     box-sizing: border-box;
-    width: 75%;
+    width: 75%; 
 }
 
 .title{
@@ -132,11 +120,26 @@ button{
     background-color: white;
     border-radius: 50%;
     height: 40px;
-    width: 40px;
-    
+    width: 40px;    
 }
 
 .search{
     width: 80%;
     padding: 0;
+}
+
+.container-info, .container-error{
+    scale: 0;
+    opacity: 0;
+}
+
+.show-up{
+    animation: 0.5s show-up forwards;
+}
+
+@keyframes show-up {
+    to{
+        scale: 1;
+        opacity: 1;
+    }   
 }

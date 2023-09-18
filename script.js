@@ -24,9 +24,10 @@ function onClick(event){
             .then(res=> res.json())
             .then(data=>{
                 if( data.error != undefined){
+                    errorMessage.innerHTML = data.error.message;
                     containerInfo.classList.remove("container-info-active");
                     containerError.classList.add("container-error-active");
-                    errorMessage.innerHTML = data.error.message;
+                    containerError.classList.add("show-up");
                 }else{
                     weatherimg.src = data.current.condition.icon;
                     weatherimg.alt = data.current.condition.text;
@@ -34,6 +35,9 @@ function onClick(event){
                     city.innerHTML = data.location.name;
                     wind.innerHTML = data.current.wind_kph + "km/h";
                     hum.innerHTML = data.current.humidity + "%";
+                    containerError.classList.remove("container-error-active");
+                    containerInfo.classList.add("container-info-active");
+                    containerInfo.classList.add("show-up");
                 }
                 
             })
@@ -44,10 +48,7 @@ function onClick(event){
                     console.error("Problem with fetch operation: ", error);
                 }
             })
-        containerInfo.classList.add("container-info-active");
-        if(containerError.classList.contains("container-error-active")){
-            containerError.classList.remove("container-error-active");
-        }   
+        
     }
     else return;
 }
