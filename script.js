@@ -10,7 +10,6 @@ const containerError = document.querySelector(".container-error");
 const errorMessage = document.querySelector(".error-message");
 const description = document.querySelector(".description");
 
-
 const APIKey = "79b221dd0def4426838194006231609";
 
 btn.addEventListener("click", onClick);
