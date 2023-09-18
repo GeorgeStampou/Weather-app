@@ -1,7 +1,7 @@
 const btn = document.querySelector("button");
 const containerInfo = document.querySelector(".container-info");
 const input = document.querySelector("input");
-const weatherimg = document.querySelector("img");
+const weatherimg = document.querySelector(".weather-img");
 const tempC = document.querySelector(".temp");
 const city = document.querySelector(".city");
 const wind = document.querySelector(".wind-speed");
@@ -18,22 +18,12 @@ const APIKey = "79b221dd0def4426838194006231609";
 btn.addEventListener("click", onClick);
 
 function onClick(){
-    if(containerError.classList.contains("container-error-active")){
-        containerError.classList.remove("container-error-active");
-    }
+    
     if(input.reportValidity()){
         containerInfo.classList.add("container-info-active");
         const cityToSearch = input.value;
         fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${cityToSearch}`)
-            .then(res=>{
-                /*console.log(res.status);*/
-                if(res.ok){
-                    return res.json();
-                }else{
-                    return res.json();
-                }
-                /* handle errors with res.status.  */
-            })
+            .then(res=> res.json())
             .then(data=>{
                 console.log(data);
                 if( data.error != undefined && "code" in data.error && "message" in data.error){
@@ -57,7 +47,9 @@ function onClick(){
                     console.error("Problem with fetch operation: ", error);
                 }
             })
-            
+        if(containerError.classList.contains("container-error-active")){
+            containerError.classList.remove("container-error-active");
+        }   
     }
     else return;
 }
