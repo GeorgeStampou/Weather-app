@@ -50,5 +50,5 @@ This Weather App uses the WeatherAPI (https://www.weatherapi.com) to fetch weath
  const APIKey = "YOUR_API_KEY_HERE";
 ```
 ## Screenshot
-
+![image](https://github.com/GeorgeStampou/Weather-app/assets/58564542/4f886bb1-bd2e-48cb-9ead-4fc46c8d85ab)
 
