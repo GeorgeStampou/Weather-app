@@ -87,3 +87,12 @@ input{
     padding-bottom: 2%;
 }
 
+.container-error{
+    display: none;
+}
+
+.container-error-active{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
