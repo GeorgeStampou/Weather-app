@@ -44,14 +44,16 @@ main{
     box-shadow: 0 8px 32px rgba(0, 0, 0, 0.37);
 }
 
-.container-info{
+.container-info, .container-error{
     display: none;
 }
 
-.container-info-active{
+.container-info-active, .container-error-active{
     display: flex;
     flex-direction: column;
     text-align: center;
+    scale: 0;
+    opacity: 0;
 }
 
 .hum-wind{
@@ -105,16 +107,6 @@ input{
     padding-bottom: 2%;
 }
 
-.container-error{
-    display: none;
-}
-
-.container-error-active{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-}
-
 button{
     border: none;
     background-color: white;
@@ -126,11 +118,6 @@ button{
 .search{
     width: 80%;
     padding: 0;
-}
-
-.container-info, .container-error{
-    scale: 0;
-    opacity: 0;
 }
 
 .show-up{
