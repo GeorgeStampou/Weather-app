@@ -12,21 +12,18 @@ const errorMessage = document.querySelector(".error-message");
 
 const APIKey = "79b221dd0def4426838194006231609";
 
-
-
-
 btn.addEventListener("click", onClick);
+input.addEventListener("keypress", onClick);
 
-function onClick(){
+function onClick(event){
     
-    if(input.reportValidity()){
-        containerInfo.classList.add("container-info-active");
+    if(input.reportValidity() && (event.keyCode === 13 || event.type === "click")){
+        
         const cityToSearch = input.value;
         fetch(`http://api.weatherapi.com/v1/current.json?key=${APIKey}&q=${cityToSearch}`)
             .then(res=> res.json())
             .then(data=>{
-                console.log(data);
-                if( data.error != undefined && "code" in data.error && "message" in data.error){
+                if( data.error != undefined){
                     containerInfo.classList.remove("container-info-active");
                     containerError.classList.add("container-error-active");
                     errorMessage.innerHTML = data.error.message;
@@ -47,6 +44,7 @@ function onClick(){
                     console.error("Problem with fetch operation: ", error);
                 }
             })
+        containerInfo.classList.add("container-info-active");
         if(containerError.classList.contains("container-error-active")){
             containerError.classList.remove("container-error-active");
         }   
