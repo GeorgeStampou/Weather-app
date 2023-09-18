@@ -8,7 +8,7 @@
 }
 
 body{
-    background: linear-gradient(90deg, #43cea2, #185a9d);
+    background: linear-gradient(90deg, #F1F2B5, #135058);
 }
 
 main{
@@ -89,6 +89,11 @@ h2{
     font-size: 1.3em;
 }
 
+h3{
+    font-size: 1em;
+    font-weight: 500;
+}
+
 .input-btn{
     display: flex;
     flex-wrap: wrap;
@@ -113,6 +118,11 @@ button{
     border-radius: 50%;
     height: 40px;
     width: 40px;    
+}
+
+button:hover{
+    background-color: #135058;
+    color: white
 }
 
 .search{

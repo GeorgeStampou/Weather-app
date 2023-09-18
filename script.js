@@ -8,6 +8,7 @@ const wind = document.querySelector(".wind-speed");
 const hum = document.querySelector(".hum");
 const containerError = document.querySelector(".container-error");
 const errorMessage = document.querySelector(".error-message");
+const description = document.querySelector(".description");
 
 
 const APIKey = "79b221dd0def4426838194006231609";
@@ -29,9 +30,11 @@ function onClick(event){
                     containerError.classList.add("container-error-active");
                     containerError.classList.add("show-up");
                 }else{
+                    console.log(data);
                     weatherimg.src = data.current.condition.icon;
                     weatherimg.alt = data.current.condition.text;
-                    tempC.innerHTML = Math.round(data.current.temp_c) + "°C";
+                    tempC.innerHTML = `${Math.round(data.current.temp_c)}°C`;
+                    description.innerHTML = data.current.condition.text; 
                     city.innerHTML = data.location.name;
                     wind.innerHTML = data.current.wind_kph + "km/h";
                     hum.innerHTML = data.current.humidity + "%";
