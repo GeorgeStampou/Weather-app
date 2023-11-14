@@ -1,41 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
-    <link rel="stylesheet" href="styles.css">
-</head>
-<body>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
     <main>
-        <div class="container shadow">
-            <h1 class="title">Weather App</h1>
-            <label for="location">Enter the location</label>
-            <div class="input-btn">
-                <input type="text" name="location" id="location" placeholder="Enter your location" required>
-                <button type="submit"><img class="search" src="./icons/search-icon2.png" alt="Search Icon"></button>
-            </div>
-            <div class="container-info">
-                <img src="" class="weather-img" alt="No image found">
-                <h1 class="temp">No temperature found</h1>
-                <p class="description">No description</p>
-                <h2 class="city">No location found</h2>
-                <div class="hum-wind">
-                    <p>Wind speed</p>
-                    <p>Humidity</p>
-                    <p class="wind-speed">km/h</p>
-                    <p class="hum">%</p>
-                </div>
-            </div>
-            <div class="container-error">
-                <img src="./icons/no-location-found.png" alt="No location found icon">
-                <h2 class="error-message">Message</h2>
-            </div>
+      <div class="container shadow">
+        <h1 class="title">Weather App</h1>
+        <label for="location">Enter the location</label>
+        <div class="input-btn">
+          <input
+            type="text"
+            name="location"
+            id="location"
+            placeholder="Enter your location"
+            required
+          />
+          <button type="submit">
+            <img
+              class="search"
+              src="./icons/search-icon2.png"
+              alt="Search Icon"
+            />
+          </button>
         </div>
-        
-
+        <div class="container-info">
+          <img src="" class="weather-img" alt="No image found" />
+          <h1 class="temp">No temperature found</h1>
+          <p class="description">No description</p>
+          <h2 class="city">No location found</h2>
+          <div class="hum-wind">
+            <p>Wind speed</p>
+            <p>Humidity</p>
+            <p class="wind-speed">km/h</p>
+            <p class="hum">%</p>
+          </div>
+        </div>
+        <div class="container-error">
+          <img
+            src="./icons/no-location-found.png"
+            alt="No location found icon"
+          />
+          <h2 class="error-message">Message</h2>
+        </div>
+      </div>
     </main>
-    
+    <script src="config.js"></script>
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
